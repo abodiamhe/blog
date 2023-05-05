@@ -11,7 +11,7 @@ const aboutContent = "This is my personal blog, can wake up in the morning and p
 const contactContent = "you can only note this name: Ssmooth tech. don't worry, you don't need my number yet";
 
 const app = express();
-mongoose.connect("mongodb+srv://admin-sadiq:mariam440>@cluster0.fzqz2pj.mongodb.net/blogDB");
+mongoose.connect("mongodb+srv://admin-sadiq:mariam440@cluster0.fzqz2pj.mongodb.net/blogDB");
 
 app.set('view engine', 'ejs');
 
@@ -79,7 +79,7 @@ Post.findOne({_id: requestedPostId}).then(function(post){
 
 
 let port = process.env.PORT;
-if (port == null || port = ""){
+if (port == null || port == ""){
   port = 3000;
 }
 app.listen(port, function() {
